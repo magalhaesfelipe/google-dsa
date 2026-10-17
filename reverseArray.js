@@ -1,31 +1,32 @@
 const arr = [100, 200, 300];
 
-function reversePositive(array) {
-    const length = arr.length;
-    let reversedArr = [];
+function reverse() {
+  const length = arr.length; // 3
+  let reversedArr = [];
+  let posi = 0;
 
-    for (let y = 0; y < length; y++) {
-        // const index = y === 0 ? 1 : y;
+  for (let y = length - 1; y >= 0; y--) {
+    // reversedArr[y] = arr[posi];
+    reversedArr[posi] = arr[y];
+    posi++;
+  }
 
-        reversedArr[y] = arr[(length - 1)  - y];
-    }
-
-    console.log(reversedArr)
+  console.log(reversedArr);
 }
 
-reversePositive(arr);
+reverse();
 
-// function reverse(ary) {
+// function reversePositive(array) {
 //     const length = arr.length;
-
-//     console.log(length);
 //     let reversedArr = [];
 
-//     for (let y = length; y > 0; y--) {
-//         reversedArr[y - (y.length - 1)] = arr[y - 1];
+//     for (let y = 0; y < length; y++) {
+//         // const index = y === 0 ? 1 : y;
+
+//         reversedArr[y] = arr[(length - 1)  - y];
 //     }
 
 //     console.log(reversedArr)
 // }
 
-// reverse()
+// reversePositive(arr);
